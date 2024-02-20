@@ -1,0 +1,37 @@
+version: 2
+sources:
+  - name: cliente_table
+    description: Source clients data
+    database: BD_STORE_TEST_DBT
+    schema: public
+    tables:
+      - name: clientes
+        description: table of clients
+        columns:
+          - name: id_cliente
+            description: unique numero identify of client
+            tests:
+              - unique
+              - not_null
+          - name: nome_cliente
+            description: Name of person or client
+            tests:
+              - not_null
+          - name: idade
+            description: Age
+            tests:
+              - not_null
+          - name: genero
+            description: Sex of cliente (M/F)
+            tests:
+              - not_null
+              - accepted_values:
+                values: ['Feminino','Masculino']
+          - name: cidade
+            description: City when cliente live
+            tests:
+              - not_null
+          - name: codigo_postal
+            description: Zip code of adress
+            tests:
+              - not_null 
