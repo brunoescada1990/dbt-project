@@ -1,0 +1,15 @@
+
+version: 2
+
+models:
+    - name: model_venda_cancelada
+      description: "Lista de vendas canceladas"
+      columns:
+          - name: ID_VENDA
+            description: "Identificador de venda"
+            tests:
+                - not_null
+          - name: Valor_venda
+            description: "Valor total de venda"
+            tests:
+              - not_null               
