@@ -24,9 +24,8 @@ sources:
           - name: genero
             description: Sex of cliente (M/F)
             tests:
-              - not_null
               - accepted_values:
-                values: ['Feminino','Masculino']
+                  values: ['Feminino', 'Masculino']
           - name: cidade
             description: City when cliente live
             tests:

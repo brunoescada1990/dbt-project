@@ -26,7 +26,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   staging:
     materialized: view
-    snowflake_warehouse: pc_dbt_wh
+    snowflake_warehouse: staging_layer
   data_layer:
     materialized: table
-    snowflake_warehouse: pc_dbt_wh_large
+    snowflake_warehouse: data_layer
