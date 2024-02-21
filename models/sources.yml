@@ -1,0 +1,85 @@
+version: 2
+sources:
+  - name: DIMENSIONS
+    description: FOLDER OF DIMENSIONS
+    database: BD_STORE_TEST_DBT
+    schema: public
+    tables:
+      - name: clientes
+        description: table of clients
+        columns:
+          - name: id_cliente
+            description: unique numero identify of client
+            tests:
+              - unique
+              - not_null
+          - name: nome_cliente
+            description: Name of person or client
+            tests:
+              - not_null
+          - name: idade
+            description: Age
+            tests:
+              - not_null
+          - name: genero
+            description: Sex of cliente (M/F)
+            tests:
+              - accepted_values:
+                  values: ['Feminino', 'Masculino']
+          - name: cidade
+            description: City when cliente live
+            tests:
+              - not_null
+          - name: codigo_postal
+            description: Zip code of adress
+            tests:
+              - not_null
+      - name: datas
+        description: table of dates
+        columns:
+          - name: ID_DATA
+            description: unique numero identify of data
+            tests:
+              - unique
+              - not_null
+          - name: DATA_COMPLETE
+            description: complete data
+            tests:
+              - unique
+              - not_null
+          - name: ANO
+            description: year of data
+            tests:
+              - not_null
+          - name: MES
+            description: month of data
+            tests:
+              - not_null
+          - name: DIA_SEMANA
+            description: Day of the week
+            tests:
+              - not_null
+          - name: FERIADO
+            description: if is or not public holiday
+            tests:
+              - not_null
+      - name: lojas
+        description: table of lojas
+        columns:
+          - name: ID_LOJA
+            description: unique numero identify of LOJA
+            tests:
+              - unique
+              - not_null
+          - name: NOME_LOJA
+            description: Name of Store
+            tests:
+              - not_null
+          - name: CIDADE
+            description: City of Store
+            tests:
+              - not_null 
+          - name: CODIGO_POSTAL
+            description: Zip Code of Store
+            tests:
+              - not_null       

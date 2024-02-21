@@ -1,5 +1,5 @@
 with source_client as (
-    Select * from {{ source('cliente_table', 'clientes') }}
+    Select * from {{ source('DIMENSIONS', 'clientes') }}
 ),
 all_columns as (
     Select
