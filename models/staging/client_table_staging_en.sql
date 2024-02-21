@@ -8,7 +8,7 @@ all_columns as (
         IDADE AS AGE,
         GENERO AS GENDER,
         CIDADE AS CITY,
-        CODIGO_POSTAL AS ZIP_CODE
+        CODIGO_POSTAL AS ZIP_CODE,
     FROM source_client
 )
 select * from all_columns
