@@ -82,4 +82,65 @@ sources:
           - name: CODIGO_POSTAL
             description: Zip Code of Store
             tests:
-              - not_null       
+              - not_null
+      - name: Produtos
+        description: table of products
+        columns:
+          - name: ID_PRODUTO
+            description: unique numero identify of Product
+            tests:
+              - unique
+              - not_null
+          - name: NOME_PRODUTO
+            description: Name of Product
+            tests:
+              - not_null
+          - name: CATEGORIA
+            description: Category of Product
+            tests:
+              - not_null
+          - name: Marca
+            description: Brand of Product
+            tests:
+              - not_null
+          - name: Preco
+            description: Price of Product
+            tests:
+              - not_null                 
+  - name: FACTS
+    description: FOLDER OF FACTS
+    database: BD_STORE_TEST_DBT
+    schema: public
+    tables:
+      - name: Vendas
+        description: table records of sales
+        columns:
+          - name: ID_REGISTO
+            description: unique numero identify of record or transition
+            tests:
+              - unique
+              - not_null
+          - name: ID_VENDA
+            description: number identify sale. 
+            tests:
+              - not_null
+          - name: ID_DATA
+            description: number identify Date. 
+            tests:
+              - not_null
+          - name: ID_PRODUTO
+            description: number identify Product. 
+            tests:
+              - not_null
+          - name: ID_CLIENTE
+            description: number identify Client. 
+            tests:
+              - not_null
+          - name: ID_LOJA
+            description: number identify Store. 
+            tests:
+              - not_null 
+          - name: VALOR_VENDA
+            description: value total of sale. 
+            tests:
+              - not_null                  

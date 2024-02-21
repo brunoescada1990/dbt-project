@@ -1,4 +1,4 @@
-with source_data as (
+with source_date as (
     Select * from {{ source('DIMENSIONS', 'datas') }}
 ),
 all_columns as (
@@ -9,6 +9,6 @@ all_columns as (
         mes AS "MONTH",
         dia_semana AS DAY_OF_WEEK,
         feriado as PUBLIC_HOLYDAY
-    FROM source_data
+    FROM source_date
 )
 select * from all_columns
