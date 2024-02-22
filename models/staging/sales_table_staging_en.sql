@@ -9,7 +9,9 @@ all_columns as (
         ID_PRODUTO AS PRODUCT,
         ID_CLIENTE AS CLIENT,
         ID_LOJA AS STORE,
-        VALOR_VENDA AS VALUE_SALE
+        QUANTIDADE AS QUANTITY,
+        VALOR_VENDA AS VALUE_SALE,
+        ESTADO_VENDA AS STATUS_SALE
     FROM source_data
 )
 select * from all_columns

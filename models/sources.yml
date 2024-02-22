@@ -140,7 +140,15 @@ sources:
             description: number identify Store. 
             tests:
               - not_null 
+          - name: QUANTIDADE
+            description: Number of products. 
+            tests:
+              - not_null                       
           - name: VALOR_VENDA
             description: value total of sale. 
             tests:
-              - not_null                  
+              - not_null
+          - name: ESTADO_VENDA
+            description: status of sale.
+            tests:
+              - not_null                   

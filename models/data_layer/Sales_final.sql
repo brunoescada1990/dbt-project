@@ -5,7 +5,9 @@ Select
     P.NAME_PRODUCT,
     c.CLIENT_NAME,
     st.STORE_NAME,
-    s.VALUE_SALE
+    s.QUANTITY,
+    s.VALUE_SALE,
+    s.STATUS_SALE
     FROM {{ ref('Sales') }} s
     LEFT JOIN {{ ref('Date') }} d
         ON s.date_sale = d.ID
