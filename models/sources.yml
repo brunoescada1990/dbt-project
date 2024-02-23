@@ -42,7 +42,7 @@ sources:
             tests:
               - unique
               - not_null
-          - name: DATA_COMPLETE
+          - name: DATA_COMPLETA
             description: complete data
             tests:
               - unique

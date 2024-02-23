@@ -4,7 +4,7 @@ with source_date as (
 all_columns as (
     Select
         ID_data AS ID,
-        DATA_COMPLETE AS "DATE_COMPLETE",
+        DATA_COMPLETA AS "DATE_COMPLETE",
         ano AS "YEAR",
         mes AS "MONTH",
         dia_semana AS DAY_OF_WEEK,
