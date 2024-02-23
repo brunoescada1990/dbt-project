@@ -83,6 +83,12 @@ sources:
             description: Zip Code of Store
             tests:
               - not_null
+          - name: DATA_CRIACAO
+            description: Date of creation in table
+            tests:
+              - not_null
+          - name: DATA_UPDATE
+            description: Date of last update store.       
       - name: Produtos
         description: table of products
         columns:
