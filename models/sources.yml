@@ -34,6 +34,14 @@ sources:
             description: Zip code of adress
             tests:
               - not_null
+          - name: Criado_em
+            description: Date of creation
+            tests:
+              - not_null
+          - name: Atualizado_em
+            description: Date of last updated
+            tests:
+              - not_null        
       - name: datas
         description: table of dates
         columns:
