@@ -18,5 +18,5 @@ SELECT
     ZIP_CODE,
     CREATED_AT,
     UPDATED_AT
-FROM {{ ref('Client_test_error_alert') }}
+FROM {{ ref('Client') }}
 {% endsnapshot %}
