@@ -1,0 +1,168 @@
+version: 2
+sources:
+  - name: DIMENSIONS
+    description: FOLDER OF DIMENSIONS
+    database: BD_STORE_TEST_DBT
+    schema: public
+    tables:
+      - name: clientes
+        description: table of clients
+        columns:
+          - name: id_cliente
+            description: unique numero identify of client
+            tests:
+              - unique
+              - not_null
+          - name: nome_cliente
+            description: Name of person or client
+            tests:
+              - not_null
+          - name: idade
+            description: Age
+            tests:
+              - not_null
+          - name: genero
+            description: Sex of cliente (M/F)
+            tests:
+              - accepted_values:
+                  values: ['Feminino', 'Masculino']
+          - name: cidade
+            description: City when cliente live
+            tests:
+              - not_null
+          - name: codigo_postal
+            description: Zip code of adress
+            tests:
+              - not_null
+          - name: Criado_em
+            description: Date of creation
+            tests:
+              - not_null
+          - name: Atualizado_em
+            description: Date of last updated
+            tests:
+              - not_null        
+      - name: datas
+        description: table of dates
+        columns:
+          - name: ID_DATA
+            description: unique numero identify of data
+            tests:
+              - unique
+              - not_null
+          - name: DATA_COMPLETA
+            description: complete data
+            tests:
+              - unique
+              - not_null
+          - name: ANO
+            description: year of data
+            tests:
+              - not_null
+          - name: MES
+            description: month of data
+            tests:
+              - not_null
+          - name: DIA_SEMANA
+            description: Day of the week
+            tests:
+              - not_null
+          - name: FERIADO
+            description: if is or not public holiday
+            tests:
+              - not_null
+      - name: lojas
+        description: table of lojas
+        columns:
+          - name: ID_LOJA
+            description: unique numero identify of LOJA
+            tests:
+              - unique
+              - not_null
+          - name: NOME_LOJA
+            description: Name of Store
+            tests:
+              - not_null
+          - name: CIDADE
+            description: City of Store
+            tests:
+              - not_null 
+          - name: CODIGO_POSTAL
+            description: Zip Code of Store
+            tests:
+              - not_null
+          - name: DATA_CRIACAO
+            description: Date of creation in table
+            tests:
+              - not_null
+          - name: DATA_UPDATE
+            description: Date of last update store.       
+      - name: Produtos
+        description: table of products
+        columns:
+          - name: ID_PRODUTO
+            description: unique numero identify of Product
+            tests:
+              - unique
+              - not_null
+          - name: NOME_PRODUTO
+            description: Name of Product
+            tests:
+              - not_null
+          - name: CATEGORIA
+            description: Category of Product
+            tests:
+              - not_null
+          - name: Marca
+            description: Brand of Product
+            tests:
+              - not_null
+          - name: Preco
+            description: Price of Product
+            tests:
+              - not_null                 
+  - name: FACTS
+    description: FOLDER OF FACTS
+    database: BD_STORE_TEST_DBT
+    schema: public
+    tables:
+      - name: Vendas
+        description: table records of sales
+        columns:
+          - name: ID_REGISTO
+            description: unique numero identify of record or transition
+            tests:
+              - unique
+              - not_null
+          - name: ID_VENDA
+            description: number identify sale. 
+            tests:
+              - not_null
+          - name: ID_DATA
+            description: number identify Date. 
+            tests:
+              - not_null
+          - name: ID_PRODUTO
+            description: number identify Product. 
+            tests:
+              - not_null
+          - name: ID_CLIENTE
+            description: number identify Client. 
+            tests:
+              - not_null
+          - name: ID_LOJA
+            description: number identify Store. 
+            tests:
+              - not_null 
+          - name: QUANTIDADE
+            description: Number of products. 
+            tests:
+              - not_null                       
+          - name: VALOR_VENDA
+            description: value total of sale. 
+            tests:
+              - not_null
+          - name: ESTADO_VENDA
+            description: status of sale.
+            tests:
+              - not_null                   
